@@ -1,0 +1,31 @@
+<div class="main-container flex-col">
+  <div class="landing-header">
+    <span class="heading--section">SpaceX Launch Programs</span>
+  </div>
+  <div *ngIf="!loading" class="landing-body flex">
+    <div *ngFor="let mission of missionData">
+      <mat-card class="card flex-col">
+        <img mat-card-image src="{{mission.links.mission_patch}}">
+        <mat-card-content class="flex-col">
+          <div class="heading--sub-section mission-data">{{mission.mission_name}}</div>
+          <div class="flex-col">
+            <span class="heading--sub-section">Mission Ids:</span>
+            <span *ngIf="mission.mission_id?.length>0">
+              <span *ngFor="let id of mission.mission_id">
+                <span><li class="mission-data">id</li></span>
+              </span>
+            </span>
+            <div class="flex-col">
+              <span class="flex-row"><span class="heading--sub-section">Launch Year: </span> <span
+                  class="mission-data">{{mission.launch_year}}</span></span>
+              <span class="flex-row"><span class="heading--sub-section">Successful Launch: </span><span
+                  class="mission-data">{{mission.launch_success}}</span></span>
+              <span class="flex-row"><span class="heading--sub-section">Successful Landing: </span><span
+                  class="mission-data">{{mission.launch_date_local | date}}</span></span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

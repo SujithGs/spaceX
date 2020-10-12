@@ -1,0 +1,39 @@
+.heading {
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 0px;
+
+    &--page {
+        font-size: 34px;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+
+    &--section {
+        font-size: 24px;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+
+    &--sub-section {
+        font-size: 18px;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+
+    &--white {
+        color: #fff;
+    }
+}
+
+.border--bottom {
+    border-bottom: 1px solid $color-section-divider;
+}
+
+.border--right {
+    border-right: 1px solid $color-section-divider;
+}
+
+.border--all {
+    border: 1px solid $color-section-divider;
+}
